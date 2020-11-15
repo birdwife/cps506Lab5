@@ -1,11 +1,14 @@
 module Lab5 where
 
+-- thirdLast returns the third last element of a list
+
 thirdLast x  = do
  let rev1 = reverse x
  let tail1 = tail rev1
  let tail2 = tail tail1
  head tail2
-
+ 
+-- everyOther returns a list that contains every other element of the input list
 -- everyOther is a recursive function that is a wrapper for everyOtherR
 
 everyOther x = do
@@ -26,7 +29,7 @@ everyOtherR oldList count newlist = do
    let newlist2 = head1 : newlist
    everyOtherR tail1 count1 newlist2
 
-
+-- sumPosList returns the sum of all the positive integers in a given list
 -- sumPosList is a wrapper function for sumPosListR
 
 sumPosList x = do
